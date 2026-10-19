@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4 карточки</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            max-width: 800px;
+            width: 100%;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+        }
+
+        .card h2 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .card button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .card button:hover {
+            background-color: #0056b3;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="card">
+            <h2>Карточка 1</h2>
+            <p>Это первая карточка. Здесь можно разместить описание любого предмета или проекта.</p>
+            <button>Подробнее</button>
+        </div>
+
+        <div class="card">
+            <h2>Карточка 2</h2>
+            <p>Это вторая карточка. Измени текст на свой, чтобы добавить нужную информацию.</p>
+            <button>Подробнее</button>
+        </div>
+
+        <div class="card">
+            <h2>Карточка 3</h2>
+            <p>Это третья карточка. Карточки автоматически располагаются в два столбца.</p>
+            <button>Подробнее</button>
+        </div>
+
+        <div class="card">
+            <h2>Карточка 4</h2>
+            <p>Это четвёртая карточка. На мобильных устройствах карточки располагаются вертикально.</p>
+            <button>Подробнее</button>
+        </div>
+
+    </div>
+
+</body>
+</html>
